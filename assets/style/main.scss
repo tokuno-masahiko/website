@@ -1,0 +1,71 @@
+/* scss関数群
+------------------------------------------ */
+
+$sp_content_width: 390;
+$pc_full_width: 1400;
+$pc_content_width: 1250;
+
+$production: 1;
+
+@function vw($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    @return calc($px * 100vw / $sp_content_width);
+}
+
+@function vwp($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    @return calc($px * 100vw / $pc_full_width);
+}
+
+@function px2Rem($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    @return calc($px / 16) * 1rem;
+}
+
+@function min($values...) {
+    @return unquote('min(#{$values})');
+}
+
+@function max($values...) {
+    @return unquote('max(#{$values})');
+}
+
+@function mvw($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    $value1: calc($px * 100vw / $pc_content_width);
+    $value2: px2Rem($px);
+
+    @if $px>=0 {
+        @return min($value1, $value2);
+    }
+
+    @else {
+        @return max($value1, $value2);
+    }
+}
+
+// ブレークポイント設定
+$breakpoints: (
+    "sm": "screen and (min-width: 400px)",
+    "md": "screen and (min-width: 768px)",
+    "lg": "screen and (min-width: 1000px)",
+    "xl": "screen and (min-width: 1200px)",
+    ) !default;
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
