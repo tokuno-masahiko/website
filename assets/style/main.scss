@@ -5,7 +5,7 @@ $sp_content_width: 390;
 $pc_full_width: 1400;
 $pc_content_width: 1250;
 
-$production: 1;
+$production: 0;
 
 @function vw($px) {
     @if $production !=1 {
@@ -68,4 +68,380 @@ $breakpoints: (
     @media #{map-get($breakpoints, $breakpoint)} {
         @content;
     }
+}
+
+body {
+    font-family: "Noto Serif JP",serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.75;
+    color: #111;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+li,
+ol {
+    list-style: none;
+}
+
+// ヘッダー
+.header {
+    & {
+        width: 100%;
+        height: vw(63);
+        padding-left: vw(16);
+        padding-right: vw(16);
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    &__img {
+        width: vw(197);
+        height: vw(23);
+        display: flex;
+        align-items: center;
+    }
+
+    &-menu__img {
+        width: vw(24);
+        height: vw(18);
+    }
+
+    &__nav {
+        display: none;
+    }
+}
+
+// トップセクション
+.top {
+    & {
+        margin-top: vw(63);
+        margin-bottom: vw(56);
+        width: 100%;
+        padding-left: vw(16);
+        padding-right: vw(16);
+        padding-top: vw(9);
+    }
+
+    &__wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__title {
+        margin-bottom: vw(32);
+    }
+
+    &__title span:nth-of-type(1) {
+        font-size: vw(28);
+        font-weight: 700;
+        display: block;
+    }
+
+    &__title span:nth-of-type(2) {
+        font-size: vw(15);
+        display: block;
+        margin-top: vw(15);
+    }
+
+    &__img {
+        width: vw(358);
+        height: vw(450);
+    }
+}
+
+// アバウトセクション
+
+.about{
+    & {
+        width: 100%;
+    }
+
+    &__wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__title span:nth-of-type(1) {
+        font-size: vw(20);
+        font-weight: 600;
+        font-family: "Montserrat",serif;
+        color: #168352;
+        display: block;
+    }
+
+    &__title span:nth-of-type(2) {
+        font-size: vw(28);
+        font-weight: 700;
+        display: block;
+    }
+
+    &__container {
+        width: 100%;
+        background-image: url(/assets/image/about_sp.jpg);
+        background-position: center;
+        background-size: cover;
+        padding-left: vw(16);
+        padding-right: vw(16);
+        @include mq(){
+            background-image: unset;
+            background-position: unset;
+            background-size: unset;
+        }
+    }
+
+    &__desc {
+        width: vw(358);
+        background-color: rgba(255, 255, 255, .8);
+        border-radius: vw(32);
+    }
+
+    &__img {
+        display: none;
+    }
+}
+
+// フィーチャーセクション
+
+.feature {
+    & {
+        width: 100%;
+        padding-left: vw(16);
+        padding-right: vw(16);
+        padding-bottom: vw(60);
+        background-color: #f3f9f6;
+    }
+
+    &__wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__title span:nth-of-type(1) {
+        font-size: vw(16);
+        font-weight: 600;
+        font-family: "Montserrat",serif;
+        color: #168352;
+        display: block;
+    }
+
+    &__title span:nth-of-type(2) {
+        font-size: vw(20);
+        font-weight: 700;
+        display: block;
+    }
+
+    &__container {
+
+    }
+
+    &__card:nth-of-type(2) {
+        margin-top: vw(20);
+        margin-bottom: vw(20);
+    }
+
+    &__card {
+        width: vw(358);
+        height: vw(289);
+        border-radius: vw(24);
+    }
+
+    &__img {
+        width: vw(358);
+        height: vw(201);
+        border-radius: vw(24) vw(24) 0 0;
+    }
+
+    &__text {
+        height: vw(88);
+        background-color: #fff;
+        border-radius: 0 0 vw(24) vw(24);
+        font-size: vw(18);
+        font-weight: 700;
+        padding-left: vw(19.5);
+        padding-right: vw(19.6);
+    }
+}
+
+.product {
+    & {
+        width: 100%;
+        padding-left: vw(16);
+        padding-right: vw(16);
+    }
+
+    &__wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__title span:nth-of-type(1) {
+        font-size: vw(16);
+        font-weight: 600;
+        font-family: "Montserrat",serif;
+        color: #168352;
+        display: block;
+    }
+
+    &__title span:nth-of-type(2) {
+        font-size: vw(20);
+        font-weight: 700;
+        display: block;
+    }
+
+    &__container {
+
+    }
+
+    &__card {
+        width: vw(358);
+        height: vw(140);
+        border-radius: vw(24);
+        background-color: #168352;
+        padding-left: vw(24);
+        gap: vw(6.9);
+        display: flex;
+        align-items: center;
+    }
+
+    &__picture {
+        border-radius: 50%;
+    }
+
+    &__img {
+        border-radius: 50%;
+        width: vw(100);
+        height: vw(100);
+    }
+
+    &__text {
+        font-size: vw(18);
+        font-weight: 700;
+        color: #fff;
+    }
+}
+
+// ケースセクション
+
+.case {
+    & {
+        width: 100%;
+        padding-left: vw(16);
+        padding-right: vw(16);
+        background-color: #f3f9f6;
+    }
+
+    &__wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__title span:nth-of-type(1) {
+        font-size: vw(16);
+        font-weight: 600;
+        font-family: "Montserrat",serif;
+        color: #168352;
+        display: block;
+    }
+
+    &__title span:nth-of-type(2) {
+        font-size: vw(20);
+        font-weight: 700;
+        display: block;
+    }
+
+    &__container {
+
+    }
+
+    &__card {
+        width: vw(358);
+    }
+
+    &__img {
+        width: vw(358);
+        height: vw(201);
+    }
+
+    &__text {
+        font-size: vw(18);
+        font-weight: 700;
+        color: #09947b;
+    }
+}
+
+// アナウンスセクション
+
+.announce {
+    & {
+        width: 100%;
+        padding-left: vw(16);
+        padding-right: vw(16);
+        background-color: #f3f9f6;
+    }
+
+    &__wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__title span:nth-of-type(1) {
+        font-size: vw(16);
+        font-weight: 600;
+        font-family: "Montserrat",serif;
+        color: #168352;
+        display: block;
+    }
+
+    &__title span:nth-of-type(2) {
+        font-size: vw(20);
+        font-weight: 700;
+        display: block;
+    }
+
+    &__container {
+
+    }
+
 }
