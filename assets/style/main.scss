@@ -3,7 +3,7 @@
 
 $sp_content_width: 390;
 $pc_full_width: 1400;
-$pc_content_width: 1250;
+$pc_content_width: 1170;
 
 $production: 0;
 
@@ -104,6 +104,11 @@ ol {
         top: 0;
         left: 0;
         z-index: 10;
+        @include mq() {
+            height: mvw(114);
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 
     &__wrapper {
@@ -114,6 +119,9 @@ ol {
         align-items: center;
         justify-content: space-between;
         position: relative;
+        @include mq() {
+            width: mvw(1170);
+        }
     }
 
     &__img {
@@ -121,12 +129,19 @@ ol {
         height: vw(23);
         display: flex;
         align-items: center;
+        @include mq() {
+            width: mvw(263);
+            height: mvw(30);
+        }
     }
 
     &-menu__img {
         width: vw(24);
         height: vw(18);
         margin-top: vw(9);
+        @include mq() {
+        display: none;
+        }
     }
 
     .js-menu {
@@ -160,6 +175,23 @@ ol {
 
     &__nav {
         display: none;
+        @include mq() {
+        display: block;
+        }
+    }
+
+    &__nav ul {
+        @include mq() {
+        display: flex;
+        gap: mvw(38);
+        }
+    }
+
+    &__nav a {
+        @include mq() {
+            font-size: mvw(16);
+            font-weight: 700;
+        }
     }
 }
 
@@ -172,32 +204,74 @@ ol {
         padding-left: vw(16);
         padding-right: vw(16);
         padding-top: vw(9);
+        @include mq() {
+            margin-top: mvw(114);
+            padding-top: mvw(38);
+            margin-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 
     &__wrapper {
         width: 100%;
         margin: 0 auto;
+        @include mq() {
+            width: mvw(1170);
+        }
     }
 
     &__title {
         margin-bottom: vw(26);
+        @include mq() {
+            margin-bottom: 0;
+            display: flex;
+            padding-left: mvw(34);
+            padding-right: mvw(34);
+            justify-content: space-between;
+        }
     }
 
     &__title span:nth-of-type(1) {
         font-size: vw(28);
         font-weight: 700;
         display: block;
+        @include mq() {
+            font-size: mvw(40);
+            width: mvw(460);
+        }
     }
 
     &__title span:nth-of-type(2) {
         font-size: vw(15);
         display: block;
         margin-top: vw(15);
+        @include mq() {
+            width: mvw(530);
+            margin-top: mvw(9);
+        }
+    }
+
+    &-br-sp {
+        @include mq () {
+            display: none;
+        }
+    }
+
+    &__picture {
+        @include mq() {
+            width: mvw(1170);
+            margin: mvw(60) auto mvw(48);
+        }
     }
 
     &__img {
         width: vw(358);
         height: vw(450);
+        @include mq() {
+            width: mvw(1167);
+            height: mvw(550);
+        }
     }
 }
 
@@ -211,6 +285,10 @@ ol {
     &__wrapper {
         width: 100%;
         margin: 0 auto;
+        @include mq() {
+            width: mvw(1170);
+            padding-bottom: mvw(62);
+        }
     }
 
     &__title {
@@ -224,6 +302,10 @@ ol {
         color: #168352;
         display: block;
         line-height: 1.4;
+        @include mq() {
+            font-size: mvw(20);
+            line-height: 1.6;
+        }
     }
 
     &__title span:nth-of-type(2) {
@@ -232,6 +314,10 @@ ol {
         display: block;
         line-height: 1.45;
         margin-bottom: vw(20);
+        @include mq() {
+            font-size: mvw(28);
+            line-height: 1.55;
+        }
     }
 
     &__container {
@@ -244,6 +330,10 @@ ol {
             background-image: unset;
             background-position: unset;
             background-size: unset;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            justify-content: space-around;
         }
     }
 
@@ -253,6 +343,14 @@ ol {
         padding: vw(15) vw(18) vw(18) vw(18);
         background-color: rgba(255, 255, 255, .8);
         border-radius: vw(32);
+        @include mq() {
+            background-color: unset;
+            width: mvw(409.63);
+            margin: 0;
+            padding: 0;
+            padding-top: mvw(4);
+            padding-left: mvw(15);
+        }
     }
 
     &-desc__title {
@@ -260,16 +358,41 @@ ol {
         font-weight: 700;
         width: vw(305.5);
         margin: 0 auto;
+        @include mq() {
+            font-size: mvw(20);
+            width: mvw(409.63);
+            margin-bottom: mvw(24);
+        }
+    }
+
+    &-br-pc {
+        display: none;
+        @include mq() {
+            display: block;
+        }
     }
 
     &-desc__text {
         font-size: vw(15);
         width: vw(305.5);
         margin: vw(8) auto 0;
+        @include mq() {
+            width: mvw(409.63);
+            font-size: mvw(15);
+            margin: 0;
+        }
     }
 
     &__img {
         display: none;
+        @include mq() {
+            display: block;
+            width: mvw(390);
+            height: mvw(570);
+            border-radius: mvw(40);
+            margin-right: mvw(30);
+            margin-top: mvw(8);
+        }
     }
 }
 
@@ -280,11 +403,17 @@ ol {
         width: 100%;
         padding: vw(50) vw(16) vw(60) vw(16);
         background-color: #f3f9f6;
+        @include mq() {
+            padding: mvw(56) 0 mvw(62) 0;
+        }
     }
 
     &__wrapper {
         width: 100%;
         margin: 0 auto;
+        @include mq() {
+            width: mvw(1170);
+        }
     }
 
     &__title {
@@ -298,6 +427,10 @@ ol {
         color: #168352;
         display: block;
         line-height: 1.4;
+        @include mq() {
+            font-size: mvw(20);
+            line-height: 1.6;
+        }
     }
 
     &__title span:nth-of-type(2) {
@@ -305,27 +438,52 @@ ol {
         font-weight: 700;
         display: block;
         line-height: 1.4;
+        @include mq() {
+            font-size: mvw(28);
+            line-height: 1.7;
+        }
     }
 
     &__container {
         padding-top: vw(20);
+        @include mq() {
+            display: flex;
+            padding-top: mvw(23);
+            gap: mvw(30);
+        }
     }
 
     &__card:nth-of-type(2) {
         margin-top: vw(20);
         margin-bottom: vw(20);
+        @include mq() {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
     }
 
     &__card {
         width: vw(358);
         height: vw(289);
         border-radius: vw(24);
+        box-shadow:0 vw(1) #d2d4d3;
+        @include mq() {
+            width: mvw(369);
+            height: mvw(319);
+            border-radius: mvw(24);
+            box-shadow:0 mvw(1) #d2d4d3; 
+        }
     }
 
     &__img {
         width: vw(358);
         height: vw(201);
         border-radius: vw(24) vw(24) 0 0;
+        @include mq() {
+            width: mvw(369);
+            height: mvw(226);
+            border-radius: mvw(24) mvw(24) 0 0;
+        }
     }
 
     &__text {
@@ -337,6 +495,12 @@ ol {
         padding-top: vw(6);
         padding-left: vw(17);
         padding-right: vw(17);
+        @include mq() {
+            height: mvw(84);
+            border-radius: 0 0 mvw(24) mvw(24);
+            font-size: mvw(19);
+            padding: mvw(5) mvw(20) 0 mvw(20);
+        }
     }
 }
 
@@ -346,12 +510,18 @@ ol {
         padding-top: vw(46);
         padding-left: vw(16);
         padding-right: vw(16);
+        @include mq() {
+            padding: mvw(55) 0 mvw(12) 0;
+        }
     }
 
     &__wrapper {
         width: 100%;
         margin: 0 auto;
         padding-bottom: vw(34);
+        @include mq() {
+            width: mvw(1170);
+        }
     }
 
     &__title {
@@ -367,11 +537,19 @@ ol {
         color: #168352;
         display: block;
         line-height: 1.4;
+        @include mq() {
+            font-size: mvw(20);
+            line-height: 1.6;
+        }
     }
 
     &__title span:nth-of-type(1) > span {
         margin-left: vw(5);
         margin-right: vw(5);
+        @include mq() {
+            margin-left: mvw(5);
+            margin-right: mvw(5);
+        }
     }
 
     &__title span:nth-of-type(2) {
@@ -379,10 +557,18 @@ ol {
         font-weight: 700;
         display: block;
         line-height: 1.4;
+        @include mq() {
+            font-size: mvw(28);
+            line-height: 1.8;
+        }
     }
 
     &__container {
-
+        @include mq() {
+            display: flex;
+            justify-content: center;
+            gap: mvw(50);
+        }
     }
 
     &__card {
@@ -398,15 +584,52 @@ ol {
         margin-bottom: vw(20);
     }
 
+    &__container:nth-of-type(1) &__card{
+        @include mq() {
+            width: mvw(525);
+            height: mvw(180);
+            border-radius: mvw(24);
+            margin-bottom: mvw(40);
+            padding-left: mvw(30);
+        }
+    }
+
+    &__container:nth-of-type(2) &__card{
+        @include mq() {
+            width: mvw(333);
+            height: mvw(150);
+            border-radius: mvw(24);
+        }
+    }
+
     &__picture {
         border-radius: 50%;
         padding-top: vw(10);
+        @include mq() {
+            padding-top: mvw(10);
+        }
     }
 
     &__img {
         border-radius: 50%;
         width: vw(100);
         height: vw(100);
+    }
+
+    &__container:nth-of-type(1) &__img {
+        @include mq() {
+            border-radius: 50%;
+            width: mvw(133);
+            height: mvw(133);
+        }
+    }
+
+    &__container:nth-of-type(2) &__img {
+        @include mq() {
+            border-radius: 50%;
+            width: mvw(110);
+            height: mvw(110);
+        }
     }
 
     &__text {
@@ -416,25 +639,24 @@ ol {
         text-align: left;
     }
 
-    // 768以上のときに必要になるかも、、
-    // &__text-1st {
-    //     width: vw(162);
-    // }
-    // &__text-2nd {
-    //     width: vw(142.4);
-    // }
-    // &__text-3rd {
-    //     width: vw(162);
-    // }
-    // &__text-4th {
-    //     width: vw(162);
-    // }
-    // &__text-5th {
-    //     width: vw(162);
-    // }
+    &__container:nth-of-type(1) &__text {
+        @include mq() {
+            font-size: mvw(24);
+            width: mvw(216);
+            margin-left: mvw(13);
+        }
+    }
 
-    @include mq () {
-        .br-sp {
+    &__container:nth-of-type(2) &__text {
+        @include mq() {
+            font-size: mvw(20);
+            width: mvw(156);
+            margin-left: mvw(4);
+        }
+    }
+
+    &-br-sp {
+        @include mq () {
             display: none;
         }
     }
@@ -447,16 +669,26 @@ ol {
         width: 100%;
         padding: vw(54) vw(16) vw(50) vw(16);
         background-color: #f3f9f6;
+        @include mq() {
+            padding: mvw(54) mvw(16) mvw(60) mvw(16);
+            
+        }
     }
 
     &__wrapper {
         width: 100%;
         margin: 0 auto;
+        @include mq() {
+            width: mvw(1170);
+        }
     }
 
     &__title {
         text-align: center;
         padding-bottom: vw(20);
+        @include mq() {
+
+        }
     }
 
     &__title span:nth-of-type(1) {
@@ -466,6 +698,10 @@ ol {
         color: #168352;
         display: block;
         line-height: 1.4;
+        @include mq() {
+            font-size: mvw(20);
+            line-height: 1.6;
+        }
     }
 
     &__title span:nth-of-type(2) {
@@ -473,24 +709,44 @@ ol {
         font-weight: 700;
         display: block;
         line-height: 1.4;
+        @include mq() {
+            font-size: mvw(28);
+            line-height: 1.65;
+        }
     }
 
     &__container {
-
+        @include mq() {
+            display: flex;
+            justify-content: center;
+            gap: mvw(30);
+            margin-top: mvw(5);
+        }
     }
 
     &__card {
         width: vw(358);
+        @include mq() {
+            width: mvw(369);
+        }
     }
 
     &__card:nth-of-type(2) {
         margin-top: vw(28);
         margin-bottom: vw(26);
+        @include mq() {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
     }
 
     &__img {
         width: vw(358);
         height: vw(201);
+        @include mq() {
+            width: mvw(369);
+            height: mvw(226);
+        }
     }
 
     &__text {
@@ -499,6 +755,12 @@ ol {
         color: #09947b;
         letter-spacing: .01em;
         padding-left: vw(1);
+        @include mq() {
+            font-size: mvw(19);
+            padding-left: 0;
+            padding-top: mvw(1);
+
+        }
     }
 }
 
@@ -509,16 +771,25 @@ ol {
         width: 100%;
         padding: vw(50) vw(16) vw(60) vw(16);
         background-color: #fff;
+        @include mq() {
+            padding: mvw(56) mvw(16) mvw(70) mvw(16);
+        }
     }
 
     &__wrapper {
         width: 100%;
         margin: 0 auto;
+        @include mq() {
+            width: mvw(1170);
+        }
     }
 
     &__title {
         text-align: center;
         padding-bottom: vw(22);
+        @include mq() {
+            padding-bottom: mvw(26);
+        }
     }
 
     &__title span:nth-of-type(1) {
@@ -528,6 +799,10 @@ ol {
         color: #168352;
         display: block;
         line-height: 1.4;
+        @include mq() {
+            font-size: mvw(20);
+            line-height: 1.6;
+        }
     }
 
     &__title span:nth-of-type(2) {
@@ -535,24 +810,49 @@ ol {
         font-weight: 700;
         display: block;
         line-height: 1.4;
+        @include mq() {
+            font-size: mvw(28);
+            line-height: 1.55;
+        }
     }
 
     &__container {
-
+        @include mq() {
+            width: mvw(900);
+            margin: 0 auto mvw(31);
+        }
     }
 
     &__card {
         height: vw(116);
         border-top: 1px solid #ddd;
         padding-top: vw(14);
+        @include mq() {
+            height: mvw(61);
+            padding-top: mvw(14);
+            display: flex;
+            gap: mvw(23);
+        }
+    }
+
+    &__card:nth-of-type(6) {
+        @include mq() {
+            border-bottom: 1px solid #ddd;
+        }
     }
 
     &__inner {
         display: flex;
+        @include mq(){
+            gap: mvw(19);
+        }
     }
 
     &__date {
         font-size: vw(15);
+        @include mq() {
+            font-size: mvw(14);
+        }
     }
 
     &__category {
@@ -567,6 +867,14 @@ ol {
         display: flex;
         justify-content: center;
         align-items: center;
+        @include mq() {
+            width: mvw(134);
+            height: mvw(28);
+            border-radius: mvw(4);
+            font-size: mvw(13);
+            margin-top: 0;
+            margin-left: 0;
+        }
     }
 
     &__text {
@@ -575,11 +883,19 @@ ol {
         color: #09947b;
         display: block;
         padding-top: vw(8);
+        @include mq() {
+            font-size: mvw(15);
+            padding-top: 0;
+        }
     }
 
     &__card:nth-of-type(6) &__text {
         border-bottom: 1px solid #ddd;
         padding-bottom: vw(11);
+        @include mq() {
+            padding-bottom: mvw(11);
+            border-bottom: none;
+        }
     }
 
     &__btn a {
@@ -596,11 +912,22 @@ ol {
         align-items: center;
         margin: 0 auto;
         box-shadow:0 vw(5) #066655;
+        @include mq() {
+            border-radius: mvw(33);
+            width: mvw(300);
+            height: mvw(66);
+            font-size: mvw(18);
+            box-shadow:0 mvw(5) #066655;
+        }
     }
 
     &__btn a:hover {
         box-shadow: 0 vw(2) #066655;
         transform: translateY(vw(3));
+        @include mq() {
+            box-shadow: 0 mvw(2) #066655;
+            transform: translateY(mvw(3));
+        }
     }
 }
 
@@ -609,12 +936,18 @@ ol {
         width: 100%;
         height: vw(68);
         background-color: #168352;
+        @include mq() {
+            height: mvw(96);
+        }
     }
 
     &__wrapper {
         width: vw(215);
         height: 100%;
         margin: 0 auto;
+        @include mq() {
+            width: mvw(1170);
+        }
     }
 
     &__wrapper ul {
@@ -629,10 +962,23 @@ ol {
         color: #fff;
         display: flex;
         align-items: center;
+        @include mq() {
+            font-size: mvw(15);
+            padding-left: mvw(3);
+        }
     }
 
     &__wrapper ul li:nth-of-type(2) {
         margin-left: vw(14);
         margin-right: vw(14);
+        @include mq() {
+            margin-left: mvw(14);
+            margin-right: mvw(14);
+        }
     }
 }
+
+
+//*** /price/index.html ***// 
+
+
