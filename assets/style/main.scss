@@ -83,9 +83,9 @@ a {
     color: black;
 }
 
-a:hover {
-    opacity: 0.6;
-}
+// a:hover {
+//     opacity: 0.6;
+// }
 
 li,
 ol {
@@ -113,7 +113,7 @@ ol {
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        position: relative;
     }
 
     &__img {
@@ -126,6 +126,36 @@ ol {
     &-menu__img {
         width: vw(24);
         height: vw(18);
+        margin-top: vw(9);
+    }
+
+    .js-menu {
+        display: none;
+        width: vw(358);
+        height: vw(210);
+        background-color: #168352;
+        z-index: 11;
+        position: absolute;
+        top: vw(63);
+        left: 0;
+        border-radius: vw(24);
+        padding-top: vw(10);
+    }
+
+    .js-menu li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: vw(60);
+    }
+
+    .js-menu a {
+        color: #fff;
+        font-size: vw(18);
+        font-weight: 700;
+        display: block;
+        width: 100%;
+        text-align: center;
     }
 
     &__nav {
@@ -137,7 +167,7 @@ ol {
 .top {
     & {
         margin-top: vw(63);
-        margin-bottom: vw(56);
+        margin-bottom: vw(44);
         width: 100%;
         padding-left: vw(16);
         padding-right: vw(16);
@@ -150,7 +180,7 @@ ol {
     }
 
     &__title {
-        margin-bottom: vw(32);
+        margin-bottom: vw(26);
     }
 
     &__title span:nth-of-type(1) {
@@ -188,17 +218,20 @@ ol {
     }
 
     &__title span:nth-of-type(1) {
-        font-size: vw(20);
+        font-size: vw(16);
         font-weight: 600;
         font-family: "Montserrat",serif;
         color: #168352;
         display: block;
+        line-height: 1.4;
     }
 
     &__title span:nth-of-type(2) {
-        font-size: vw(28);
+        font-size: vw(20);
         font-weight: 700;
         display: block;
+        line-height: 1.45;
+        margin-bottom: vw(20);
     }
 
     &__container {
@@ -206,8 +239,7 @@ ol {
         background-image: url(/assets/image/about_sp.jpg);
         background-position: center;
         background-size: cover;
-        padding-left: vw(16);
-        padding-right: vw(16);
+        padding: vw(32) vw(16) vw(32) vw(16) ;
         @include mq(){
             background-image: unset;
             background-position: unset;
@@ -217,8 +249,23 @@ ol {
 
     &__desc {
         width: vw(358);
+        margin: 0 auto;
+        padding: vw(15) vw(18) vw(18) vw(18);
         background-color: rgba(255, 255, 255, .8);
         border-radius: vw(32);
+    }
+
+    &-desc__title {
+        font-size: vw(18);
+        font-weight: 700;
+        width: vw(305.5);
+        margin: 0 auto;
+    }
+
+    &-desc__text {
+        font-size: vw(15);
+        width: vw(305.5);
+        margin: vw(8) auto 0;
     }
 
     &__img {
@@ -231,9 +278,7 @@ ol {
 .feature {
     & {
         width: 100%;
-        padding-left: vw(16);
-        padding-right: vw(16);
-        padding-bottom: vw(60);
+        padding: vw(50) vw(16) vw(60) vw(16);
         background-color: #f3f9f6;
     }
 
@@ -252,16 +297,18 @@ ol {
         font-family: "Montserrat",serif;
         color: #168352;
         display: block;
+        line-height: 1.4;
     }
 
     &__title span:nth-of-type(2) {
         font-size: vw(20);
         font-weight: 700;
         display: block;
+        line-height: 1.4;
     }
 
     &__container {
-
+        padding-top: vw(20);
     }
 
     &__card:nth-of-type(2) {
@@ -282,19 +329,21 @@ ol {
     }
 
     &__text {
-        height: vw(88);
+        height: vw(80);
         background-color: #fff;
         border-radius: 0 0 vw(24) vw(24);
         font-size: vw(18);
         font-weight: 700;
-        padding-left: vw(19.5);
-        padding-right: vw(19.6);
+        padding-top: vw(6);
+        padding-left: vw(17);
+        padding-right: vw(17);
     }
 }
 
 .product {
     & {
         width: 100%;
+        padding-top: vw(46);
         padding-left: vw(16);
         padding-right: vw(16);
     }
@@ -302,24 +351,34 @@ ol {
     &__wrapper {
         width: 100%;
         margin: 0 auto;
+        padding-bottom: vw(34);
     }
 
     &__title {
         text-align: center;
+        padding-top: vw(4);
+        padding-bottom: vw(20);
     }
 
-    &__title span:nth-of-type(1) {
+    &-title__first {
         font-size: vw(16);
         font-weight: 600;
         font-family: "Montserrat",serif;
         color: #168352;
         display: block;
+        line-height: 1.4;
+    }
+
+    &__title span:nth-of-type(1) > span {
+        margin-left: vw(5);
+        margin-right: vw(5);
     }
 
     &__title span:nth-of-type(2) {
         font-size: vw(20);
         font-weight: 700;
         display: block;
+        line-height: 1.4;
     }
 
     &__container {
@@ -329,16 +388,19 @@ ol {
     &__card {
         width: vw(358);
         height: vw(140);
+        display: block;
         border-radius: vw(24);
         background-color: #168352;
         padding-left: vw(24);
-        gap: vw(6.9);
+        gap: vw(17);
         display: flex;
         align-items: center;
+        margin-bottom: vw(20);
     }
 
     &__picture {
         border-radius: 50%;
+        padding-top: vw(10);
     }
 
     &__img {
@@ -351,6 +413,30 @@ ol {
         font-size: vw(18);
         font-weight: 700;
         color: #fff;
+        text-align: left;
+    }
+
+    // 768以上のときに必要になるかも、、
+    // &__text-1st {
+    //     width: vw(162);
+    // }
+    // &__text-2nd {
+    //     width: vw(142.4);
+    // }
+    // &__text-3rd {
+    //     width: vw(162);
+    // }
+    // &__text-4th {
+    //     width: vw(162);
+    // }
+    // &__text-5th {
+    //     width: vw(162);
+    // }
+
+    @include mq () {
+        .br-sp {
+            display: none;
+        }
     }
 }
 
@@ -359,8 +445,7 @@ ol {
 .case {
     & {
         width: 100%;
-        padding-left: vw(16);
-        padding-right: vw(16);
+        padding: vw(54) vw(16) vw(50) vw(16);
         background-color: #f3f9f6;
     }
 
@@ -371,6 +456,7 @@ ol {
 
     &__title {
         text-align: center;
+        padding-bottom: vw(20);
     }
 
     &__title span:nth-of-type(1) {
@@ -379,12 +465,14 @@ ol {
         font-family: "Montserrat",serif;
         color: #168352;
         display: block;
+        line-height: 1.4;
     }
 
     &__title span:nth-of-type(2) {
         font-size: vw(20);
         font-weight: 700;
         display: block;
+        line-height: 1.4;
     }
 
     &__container {
@@ -393,6 +481,11 @@ ol {
 
     &__card {
         width: vw(358);
+    }
+
+    &__card:nth-of-type(2) {
+        margin-top: vw(28);
+        margin-bottom: vw(26);
     }
 
     &__img {
@@ -404,6 +497,8 @@ ol {
         font-size: vw(18);
         font-weight: 700;
         color: #09947b;
+        letter-spacing: .01em;
+        padding-left: vw(1);
     }
 }
 
@@ -412,9 +507,8 @@ ol {
 .announce {
     & {
         width: 100%;
-        padding-left: vw(16);
-        padding-right: vw(16);
-        background-color: #f3f9f6;
+        padding: vw(50) vw(16) vw(60) vw(16);
+        background-color: #fff;
     }
 
     &__wrapper {
@@ -424,6 +518,7 @@ ol {
 
     &__title {
         text-align: center;
+        padding-bottom: vw(22);
     }
 
     &__title span:nth-of-type(1) {
@@ -432,16 +527,112 @@ ol {
         font-family: "Montserrat",serif;
         color: #168352;
         display: block;
+        line-height: 1.4;
     }
 
     &__title span:nth-of-type(2) {
         font-size: vw(20);
         font-weight: 700;
         display: block;
+        line-height: 1.4;
     }
 
     &__container {
 
     }
 
+    &__card {
+        height: vw(116);
+        border-top: 1px solid #ddd;
+        padding-top: vw(14);
+    }
+
+    &__inner {
+        display: flex;
+    }
+
+    &__date {
+        font-size: vw(15);
+    }
+
+    &__category {
+        background-color: #473221;
+        color: #fff;
+        width: vw(134);
+        height: vw(28);
+        border-radius: vw(4);
+        font-size: vw(13);
+        margin-top: vw(2);
+        margin-left: vw(16);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__text {
+        font-size: vw(15);
+        font-weight: 700;
+        color: #09947b;
+        display: block;
+        padding-top: vw(8);
+    }
+
+    &__card:nth-of-type(6) &__text {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: vw(11);
+    }
+
+    &__btn a {
+        background-color: #09947b;
+        border-radius: vw(33);
+        display: block;
+        width: vw(300);
+        height: vw(66);
+        color: #fff;
+        font-size: vw(18);
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        box-shadow:0 vw(5) #066655;
+    }
+
+    &__btn a:hover {
+        box-shadow: 0 vw(2) #066655;
+        transform: translateY(vw(3));
+    }
+}
+
+.footer {
+    & {
+        width: 100%;
+        height: vw(68);
+        background-color: #168352;
+    }
+
+    &__wrapper {
+        width: vw(215);
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    &__wrapper ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    &__wrapper ul li {
+        font-size: vw(13);
+        color: #fff;
+        display: flex;
+        align-items: center;
+    }
+
+    &__wrapper ul li:nth-of-type(2) {
+        margin-left: vw(14);
+        margin-right: vw(14);
+    }
 }
