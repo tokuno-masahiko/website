@@ -1625,6 +1625,7 @@ ol {
 .faq {
     & {
         width: 100%;
+        padding-top: vw(10);
         @include mq() {
 
         }
@@ -1638,11 +1639,68 @@ ol {
         }
     }
 
+    &__card {
+        width: vw(358);
+        margin: 0 auto;
+        border-radius: vw(16);
+        border: #ddd vw(1) solid;
+        margin-bottom: vw(24);
+        padding-bottom: vw(16);
+    }
+
+    &__heading {
+        padding-top: vw(24);
+        padding-left: vw(23);
+        padding-right: vw(23);
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        height: vw(24);
+        
+    }
+
+    &__question {
+        font-size: vw(24);
+        font-weight: 700;
+        font-family: "Montserrat",serif;
+        color: #168352;
+        line-height: .9;
+    }
+
+    &__category {
+        margin-left: 5%;
+        margin-right: auto;
+        font-size: vw(11);
+        color: #168352;
+        border: #168352 vw(1) solid;
+        width: vw(100);
+        height: vw(24);
+        text-align: center;
+        border-radius: vw(4);
+    }
+
+    &__icon {
+        font-size: vw(24);
+        line-height: .9;
+    }
+
     &__title {
-        font-size: vw(30);
+        font-size: vw(16);
+        font-weight: 700;
+        width: vw(231);
+        margin: 0 auto;
+        padding-left: vw(2);
         @include mq() {
 
         }
+    }
+
+    &__answer {
+        width: vw(309.24);
+        margin: 0 auto;
+        font-size: vw(16);
     }
 }
 
