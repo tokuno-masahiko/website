@@ -1582,11 +1582,11 @@ ol {
   margin: 0 auto;
   border-radius: 16px;
   border: #ddd 1px solid;
-  margin-bottom: 24px;
-  padding-bottom: 16px;
+  margin-bottom: 20.7px;
+  padding-bottom: 17px;
 }
 .faq__heading {
-  padding-top: 24px;
+  padding-top: 23px;
   padding-left: 23px;
   padding-right: 23px;
 }
@@ -1602,7 +1602,7 @@ ol {
   color: #168352;
   line-height: 0.9;
 }
-.faq__category {
+.faq__category1 {
   margin-left: 5%;
   margin-right: auto;
   font-size: 11px;
@@ -1613,7 +1613,23 @@ ol {
   text-align: center;
   border-radius: 4px;
 }
-.faq__icon {
+.faq__category2 {
+  margin-left: auto;
+  margin-right: 11.5%;
+  font-size: 11px;
+  color: #168352;
+  border: #168352 1px solid;
+  width: 100px;
+  height: 24px;
+  text-align: center;
+  border-radius: 4px;
+}
+.faq__icon1 {
+  font-size: 24px;
+  line-height: 0.9;
+  display: none;
+}
+.faq__icon2 {
   font-size: 24px;
   line-height: 0.9;
 }
@@ -1623,9 +1639,11 @@ ol {
   width: 231px;
   margin: 0 auto;
   padding-left: 2px;
+  line-break: anywhere;
 }
 .faq__answer {
   width: 309.24px;
-  margin: 0 auto;
+  margin: 3px auto 1px;
   font-size: 16px;
+  line-break: anywhere;
 }/*# sourceMappingURL=main.css.map */

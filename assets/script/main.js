@@ -10,15 +10,15 @@ $(function () {
 });
 
 $(function(){
-    $('.js_container').click(function(){
-        $(this).find('.js_txt').slideToggle();
-        $(this).find('.js_txt').css('display', 'flex');
-        if ($(this).find('.js_up').css('display') == 'none') {
-            $(this).find('.js_up').css('display', 'block');
-            $(this).find('.js_down').css('display', 'none');
+    $('.faq__card').click(function(){
+        $(this).find('.faq__answer').slideToggle();
+        $(this).find('.faq__answer').css('display', 'flex');
+        if ($(this).find('.faq__icon1').css('display') == 'none') {
+            $(this).find('.faq__icon1').css('display', 'block');
+            $(this).find('.faq__icon2').css('display', 'none');
         } else {
-            $(this).find('.js_up').css('display', 'none');
-            $(this).find('.js_down').css('display', 'block');
+            $(this).find('.faq__icon1').css('display', 'none');
+            $(this).find('.faq__icon2').css('display', 'block');
         }
     });
 });
