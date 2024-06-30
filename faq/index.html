@@ -26,7 +26,7 @@
     <meta property="og:site_name" content="Kirameki Farm">
 </head>
 
-<body>
+<body class="body">
     <main>
         <!-- ヘッダー -->
         <header class="header">
@@ -40,7 +40,7 @@
                 <div class="header__menu">
                     <img class="header-menu__img" src="/assets/image/header_menu.png" alt="">
                     <ul class="js-menu">
-                        <li><a href="#">トップ</a></li>
+                        <li><a href="/">トップ</a></li>
                         <li><a href="/price">価格・スペック</a></li>
                         <li><a href="/faq">よくあるご質問</a></li>
                     </ul>
@@ -210,17 +210,19 @@
             </div>
         </div>
 
-        <!-- フッター -->
-        <footer class="footer">
-            <div class="footer__wrapper">
-                <ul>
-                    <li>価格・スペック</li>
-                    <li>|</li>
-                    <li>よくあるご質問</li>
-                </ul>
-            </div>
-        </footer>
     </main>
+        <!-- フッター -->
+        <div class="footer__outer">
+            <footer class="footer faq__footer">
+                <div class="footer__wrapper">
+                    <ul>
+                        <li>価格・スペック</li>
+                        <li>|</li>
+                        <li>よくあるご質問</li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="/assets/script/main.js"></script>
