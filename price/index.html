@@ -15,6 +15,8 @@
 
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <link href="/assets/style/main.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 
     <meta name="description"
         content="Kirameki Farmは革新的な農業機器とビッグデータ、自動運転のロボット、リジェネラティブ農業を駆使して持続可能な農業を目指すイノベーション企業です。次世代の子どもたちに環境に優しい未来農業を残すために、効率化と環境配慮を融合した活動を推進しています。">
@@ -70,10 +72,31 @@
         <section class="price-gallery">
             <div class="price-gallery__wrapper">
                 <h2 class="price-gallery__title">ギャラリー</h2>
-                <picture>
-                    <source media="(min-width: 768px)" srcset="/assets/image/price_gallery_pc.jpg">
-                    <img class="price-gallery__img" src="/assets/image/price_gallery_sp.jpg" alt="">
-                </picture>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-card">
+                                <img class="price-gallery__img" src="/assets/image/price_gallery_pc.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-card">
+                                <img class="price-gallery__img" src="/assets/image/price_gallery2_pc.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-card">
+                                <img class="price-gallery__img" src="/assets/image/price_gallery3_pc.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-card">
+                                <img class="price-gallery__img" src="/assets/image/pht_products_service_carousel_4.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
         </section>
 

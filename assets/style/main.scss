@@ -83,10 +83,6 @@ a {
     color: black;
 }
 
-// a:hover {
-//     opacity: 0.6;
-// }
-
 li,
 ol {
     list-style: none;
@@ -1174,7 +1170,40 @@ ol {
             margin-bottom: 0;
         }
     }
+
+    & .swiper-pagination-bullet {
+        background-color: #eeeeee;
+        opacity: .8;
+        height: vw(8);
+        width: vw(8);
+        @include mq() {
+            height: mvw(12);
+            width: mvw(12);
+        }
+    }
+    
+    & &__wrapper .swiper-pagination-bullet-active {
+        background-color: #168352 ;
+        height: vw(8);
+        width: vw(8);
+        @include mq() {
+            height: mvw(12);
+            width: mvw(12);
+        }
+    }
+
+    & &__wrapper .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: var(--swiper-pagination-bottom, vw(18));
+        top: var(--swiper-pagination-top, auto);
+        left: 0;
+        width: 100%;
+        @include mq() {
+            bottom: var(--swiper-pagination-bottom, mvw(18));
+        }
+    }
 }
+
+
 
 // 特長セクション
 

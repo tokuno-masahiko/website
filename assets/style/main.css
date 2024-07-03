@@ -1114,6 +1114,40 @@ ol {
     margin-bottom: 0;
   }
 }
+.price-gallery .swiper-pagination-bullet {
+  background-color: #eeeeee;
+  opacity: 0.8;
+  height: 2.0512820513vw;
+  width: 2.0512820513vw;
+}
+@media screen and (min-width: 768px) {
+  .price-gallery .swiper-pagination-bullet {
+    height: min(1.0256410256vw, 0.75rem);
+    width: min(1.0256410256vw, 0.75rem);
+  }
+}
+.price-gallery .price-gallery__wrapper .swiper-pagination-bullet-active {
+  background-color: #168352;
+  height: 2.0512820513vw;
+  width: 2.0512820513vw;
+}
+@media screen and (min-width: 768px) {
+  .price-gallery .price-gallery__wrapper .swiper-pagination-bullet-active {
+    height: min(1.0256410256vw, 0.75rem);
+    width: min(1.0256410256vw, 0.75rem);
+  }
+}
+.price-gallery .price-gallery__wrapper .swiper-horizontal > .swiper-pagination-bullets, .price-gallery .swiper-pagination-bullets.swiper-pagination-horizontal, .price-gallery .swiper-pagination-custom, .price-gallery .swiper-pagination-fraction {
+  bottom: var(--swiper-pagination-bottom, 4.6153846154vw);
+  top: var(--swiper-pagination-top, auto);
+  left: 0;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .price-gallery .price-gallery__wrapper .swiper-horizontal > .swiper-pagination-bullets, .price-gallery .swiper-pagination-bullets.swiper-pagination-horizontal, .price-gallery .swiper-pagination-custom, .price-gallery .swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom, min(1.5384615385vw, 1.125rem));
+  }
+}
 
 .price-feature {
   margin-bottom: 12.8205128205vw;

@@ -22,3 +22,13 @@ $(function(){
         }
     });
 });
+
+const swiper = new Swiper(".swiper", {
+    loop: true,
+    // 前後の矢印
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    slidesPerView: 1,
+});
