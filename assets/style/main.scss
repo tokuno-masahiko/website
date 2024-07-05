@@ -3,7 +3,7 @@
 
 $sp_content_width: 390;
 $pc_full_width: 1400;
-$pc_content_width: 1170;
+$pc_content_width: 1240;
 
 $production: 1;
 
@@ -315,6 +315,7 @@ ol {
         @include mq() {
             font-size: mvw(28);
             line-height: 1.55;
+            margin-bottom: mvw(20);
         }
     }
 
@@ -473,6 +474,16 @@ ol {
         }
     }
 
+    &__picture {
+        width: vw(358);
+        height: vw(201);
+        border-radius: vw(24) vw(24) 0 0;
+        @include mq() {
+            width: mvw(369);
+            height: mvw(226);
+            border-radius: mvw(24) mvw(24) 0 0;
+        }
+    }
     &__img {
         width: vw(358);
         height: vw(201);
@@ -485,19 +496,19 @@ ol {
     }
 
     &__text {
-        height: vw(80);
+        height: vw(88);
         background-color: #fff;
         border-radius: 0 0 vw(24) vw(24);
         font-size: vw(18);
         font-weight: 700;
-        padding-top: vw(6);
+        padding-top: vw(12);
         padding-left: vw(17);
         padding-right: vw(17);
         @include mq() {
-            height: mvw(84);
+            height: mvw(93);
             border-radius: 0 0 mvw(24) mvw(24);
             font-size: mvw(19);
-            padding: mvw(5) mvw(20) 0 mvw(20);
+            padding: mvw(12) mvw(20) 0 mvw(20);
         }
     }
 }
@@ -519,6 +530,7 @@ ol {
         padding-bottom: vw(34);
         @include mq() {
             width: mvw(1170);
+            padding-bottom: mvw(34);
         }
     }
 
@@ -712,7 +724,7 @@ ol {
         text-align: center;
         padding-bottom: vw(20);
         @include mq() {
-
+            padding-bottom: mvw(20);
         }
     }
 
@@ -1061,12 +1073,12 @@ ol {
     &__title {
         margin-bottom: vw(17);
         font-size: vw(30);
-        margin-left: vw(2);
+        padding-left: vw(12);
         @include mq() {
             margin-bottom: 0;
             font-size: mvw(36);
             font-weight: 700;
-            width: mvw(327);
+            width: mvw(335);
             height: mvw(113);
             background-color: #fff;
             border-radius: 0 mvw(40) 0 0;
@@ -1075,8 +1087,8 @@ ol {
             align-items: center;
             justify-content: center;
             position: absolute;
-            bottom: mvw(40);
-            left: mvw(-2);
+            bottom: mvw(39);
+            left: mvw(-7);
         }
     }
 
@@ -1084,9 +1096,12 @@ ol {
         font-size: vw(12);
         display: flex;
         justify-content: flex-end;
+        padding-right: vw(11);
         @include mq() {
-            margin-top: mvw(19);
+            margin-top: mvw(20);
             font-size: mvw(12);
+            padding-right: 0;
+
         }
     }
 
@@ -1103,7 +1118,7 @@ ol {
 
 .price-gallery {
     & {
-        margin-bottom: vw(52);
+        margin-bottom: vw(34);
         width: 100%;
         padding-left: vw(14);
         padding-right: vw(14);
@@ -1214,7 +1229,7 @@ ol {
         padding-top: vw(1);
         @include mq() {
             margin-bottom: mvw(50);
-            padding-top: mvw(57);
+            padding-top: mvw(50);
         }
     }
 
@@ -1295,6 +1310,7 @@ ol {
         font-size: vw(18);
         font-weight: 700;
         width: vw(357);
+        line-break: anywhere;
         @include mq() {
             margin-top: mvw(8);
             font-size: mvw(18);
@@ -1655,8 +1671,8 @@ ol {
             align-items: center;
             justify-content: center;
             position: absolute;
-            bottom: mvw(40);
-            left: mvw(-2);
+            bottom: mvw(39);
+            left: mvw(-7);
         }
     }
 
