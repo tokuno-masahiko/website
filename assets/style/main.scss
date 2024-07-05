@@ -780,9 +780,11 @@ ol {
     &__img {
         width: vw(358);
         height: vw(201);
+        border-radius: vw(6);
         @include mq() {
             width: mvw(369);
             height: mvw(226);
+            border-radius: mvw(20);
         }
     }
 
@@ -1214,6 +1216,9 @@ ol {
         width: 100%;
         @include mq() {
             bottom: var(--swiper-pagination-bottom, mvw(18));
+            top: var(--swiper-pagination-top, auto);
+            left: 0;
+            width: 100%;
         }
     }
 }

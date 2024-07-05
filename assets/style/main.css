@@ -720,11 +720,13 @@ ol {
 .case__img {
   width: 91.7948717949vw;
   height: 51.5384615385vw;
+  border-radius: 1.5384615385vw;
 }
 @media screen and (min-width: 768px) {
   .case__img {
     width: min(29.7580645161vw, 23.0625rem);
     height: min(18.2258064516vw, 14.125rem);
+    border-radius: min(1.6129032258vw, 1.25rem);
   }
 }
 .case__text {
@@ -1167,6 +1169,9 @@ ol {
 @media screen and (min-width: 768px) {
   .price-gallery .price-gallery__wrapper .swiper-horizontal > .swiper-pagination-bullets, .price-gallery .swiper-pagination-bullets.swiper-pagination-horizontal, .price-gallery .swiper-pagination-custom, .price-gallery .swiper-pagination-fraction {
     bottom: var(--swiper-pagination-bottom, min(1.4516129032vw, 1.125rem));
+    top: var(--swiper-pagination-top, auto);
+    left: 0;
+    width: 100%;
   }
 }
 
