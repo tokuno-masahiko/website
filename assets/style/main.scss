@@ -1194,8 +1194,8 @@ ol {
         height: vw(8);
         width: vw(8);
         @include mq() {
-            height: mvw(12);
-            width: mvw(12);
+            height: mvw(8);
+            width: mvw(8);
         }
     }
     
@@ -1204,8 +1204,8 @@ ol {
         height: vw(8);
         width: vw(8);
         @include mq() {
-            height: mvw(12);
-            width: mvw(12);
+            height: mvw(8);
+            width: mvw(8);
         }
     }
 
@@ -1234,7 +1234,7 @@ ol {
         padding-top: vw(1);
         @include mq() {
             margin-bottom: mvw(50);
-            padding-top: mvw(50);
+            padding-top: mvw(56);
         }
     }
 
