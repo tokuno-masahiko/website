@@ -508,7 +508,7 @@ ol {
             height: mvw(93);
             border-radius: 0 0 mvw(24) mvw(24);
             font-size: mvw(19);
-            padding: mvw(12) mvw(20) 0 mvw(20);
+            padding: mvw(11.4) mvw(20) 0 mvw(21.4);
         }
     }
 }
@@ -685,6 +685,7 @@ ol {
     }
 
     &__container:nth-of-type(2) &__text {
+        width: vw(180);
         @include mq() {
             font-size: mvw(20);
             width: mvw(156);
@@ -1021,6 +1022,10 @@ ol {
             margin-right: mvw(14);
         }
     }
+
+    &__wrapper ul li a {
+        color: #fff;
+    }
 }
 
 
@@ -1142,7 +1147,6 @@ ol {
     }
 
     &__title {
-        margin-bottom: vw(24);
         font-size: vw(22);
         border-bottom: #ddd solid vw(3);
         height: vw(46);

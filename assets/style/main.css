@@ -450,7 +450,7 @@ ol {
     height: min(7.5vw, 5.8125rem);
     border-radius: 0 0 min(1.935483871vw, 1.5rem) min(1.935483871vw, 1.5rem);
     font-size: min(1.5322580645vw, 1.1875rem);
-    padding: min(0.9677419355vw, 0.75rem) min(1.6129032258vw, 1.25rem) 0 min(1.6129032258vw, 1.25rem);
+    padding: min(0.9193548387vw, 0.7125rem) min(1.6129032258vw, 1.25rem) 0 min(1.7258064516vw, 1.3375rem);
   }
 }
 
@@ -623,6 +623,9 @@ ol {
     width: min(17.4193548387vw, 13.5rem);
     margin-left: min(1.0483870968vw, 0.8125rem);
   }
+}
+.product__container:nth-of-type(2) .product__text {
+  width: 46.1538461538vw;
 }
 @media screen and (min-width: 768px) {
   .product__container:nth-of-type(2) .product__text {
@@ -972,6 +975,9 @@ ol {
     margin-right: min(1.1290322581vw, 0.875rem);
   }
 }
+.footer__wrapper ul li a {
+  color: #fff;
+}
 
 .price-header {
   color: #168352;
@@ -1088,7 +1094,6 @@ ol {
   }
 }
 .price-gallery__title {
-  margin-bottom: 6.1538461538vw;
   font-size: 5.641025641vw;
   border-bottom: #ddd solid 0.7692307692vw;
   height: 11.7948717949vw;
