@@ -899,7 +899,7 @@ ol {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 6.6666666667vw auto 0;
   box-shadow: 0 1.2820512821vw #066655;
 }
 @media screen and (min-width: 768px) {
@@ -909,6 +909,7 @@ ol {
     height: min(5.3225806452vw, 4.125rem);
     font-size: min(1.4516129032vw, 1.125rem);
     box-shadow: 0 min(0.4032258065vw, 0.3125rem) #066655;
+    margin-top: 0;
   }
 }
 .announce__btn a:hover {
@@ -1574,6 +1575,10 @@ ol {
     border-radius: min(3.2258064516vw, 2.5rem);
   }
 }
+.price-inquiry a:hover {
+  color: #168352;
+  background-color: #fff;
+}
 
 .faq-header {
   color: #168352;
@@ -1603,6 +1608,7 @@ ol {
 @media screen and (min-width: 768px) {
   .faq-top__wrapper {
     width: min(96.7741935484vw, 75rem);
+    max-width: min(96.7741935484vw, 75rem);
     position: relative;
   }
 }
@@ -1629,17 +1635,17 @@ ol {
     margin-bottom: 0;
     font-size: min(2.9032258065vw, 2.25rem);
     font-weight: 700;
-    width: min(26.3709677419vw, 20.4375rem);
+    width: min(27.4193548387vw, 21.25rem);
     height: min(9.1129032258vw, 7.0625rem);
     background-color: #fff;
     border-radius: 0 min(3.2258064516vw, 2.5rem) 0 0;
-    padding-left: min(0.3225806452vw, 0.25rem);
+    padding-left: min(1.1290322581vw, 0.875rem);
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     bottom: min(3.1451612903vw, 2.4375rem);
-    left: max(-0.564516129vw, -0.4375rem);
+    left: max(-1.5322580645vw, -1.1875rem);
   }
 }
 .faq-top__flow {
@@ -1685,6 +1691,7 @@ ol {
   }
 }
 .faq__card {
+  cursor: pointer;
   width: 91.7948717949vw;
   margin: 0 auto;
   border-radius: 4.1025641026vw;
@@ -1858,20 +1865,4 @@ ol {
   .footer__outer {
     height: min(0vw, 0rem);
   }
-}
-
-.faq__footer {
-  position: fixed;
-  bottom: 0;
-}
-
-.body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-}
-
-main {
-  flex: 1;
 }/*# sourceMappingURL=main.css.map */
