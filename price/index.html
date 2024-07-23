@@ -13,7 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link href="/assets/style/main.css" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -34,12 +34,12 @@
         <header class="header">
             <div class="header__wrapper">
                 <div class="header__title">
-                    <picture>
-                        <source media="(min-width: 768px)" srcset="/assets/image/header_logo_pc.png">
-                        <a href="/">
+                    <a href="/">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="/assets/image/header_logo_pc.png">
                             <img class="header__img" src="/assets/image/header_logo_sp.png" alt="Kirameki Farm">
-                        </a>
-                    </picture>
+                        </picture>
+                    </a>
                 </div>
                 <div class="header__menu">
                     <img class="header-menu__img" src="/assets/image/header_menu.png" alt="">
@@ -190,11 +190,11 @@
         </section>
 
         <!-- お問い合わせセクション -->
-        <section class="price-inquiry">
+        <div class="price-inquiry">
             <div class="price-inquiry__wrapper">
                 <a href="/contact">お問い合わせ</a>
             </div>
-        </section>
+        </div>
         
         <!-- フッター -->
         <footer class="footer">
@@ -209,7 +209,7 @@
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="/assets/script/main.js"></script>
+    <script src="/assets/script/main.js"></script>
 </body>
 
 </html>
